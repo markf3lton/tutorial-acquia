@@ -911,3 +911,9 @@ if (file_exists('/var/www/site-php')) {
 // This sets the config_sync_directory so that configuration management strategies can be used
 // with drush cex and drush cim.
 $settings['config_sync_directory'] = $app_root . '/../config/' . basename($site_path);
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
