@@ -901,10 +901,6 @@ require DRUPAL_ROOT . "/../vendor/acquia/drupal-recommended-settings/settings/ac
  * @link https://docs.acquia.com/
  */
 
-
-// This version of the Acquia require line uses the AH_SITE_GROUP environment variable so that
-// the code will run in any Acquia environment or IDE. See more at:
-// https://docs.acquia.com/acquia-cloud-platform/manage-apps/code/require-line
 if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/' . $_ENV['AH_SITE_GROUP'] . '/' . $_ENV['AH_SITE_GROUP'] . '-settings.inc';
+  require '/var/www/site-php/eemfelton2/eemfelton2-settings.inc';
 }
